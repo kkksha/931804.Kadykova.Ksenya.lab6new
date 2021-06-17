@@ -1,0 +1,14 @@
+﻿@model lastWeb.Models.File
+
+@{
+    ViewBag.Title = "Delete file";
+}
+
+<h2>Delete @Model.Name</h2>
+<div>
+    <form asp-action="Delete" asp-route-id="@Model.Id">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a class="btn btn-default" asp-action="Details" asp-route-id="@Model.Id">Cancel</a>
+    </form>
+</div>
